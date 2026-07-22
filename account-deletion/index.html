@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bitmeden Hesap Silme Talebi</title>
+    <meta
+      name="description"
+      content="Bitmeden hesabınızı ve ilişkili verilerinizi silmek için hesap silme talebi başlatın."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f3ea;
+        --card: #ffffff;
+        --text: #223126;
+        --muted: #667369;
+        --primary: #1f6b45;
+        --primary-soft: #e4f1e8;
+        --danger-soft: #fff5f3;
+        --danger-border: #e9c1ba;
+        --border: #e4ded2;
+        --shadow: 0 18px 45px rgba(35, 49, 38, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(940px, 100%);
+        margin: 0 auto;
+        padding: 32px 18px 56px;
+      }
+
+      .hero,
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: var(--card);
+        box-shadow: var(--shadow);
+        padding: 28px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--primary);
+        font-weight: 900;
+      }
+
+      .mark {
+        display: inline-grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--primary-soft);
+      }
+
+      h1 {
+        margin: 18px 0 10px;
+        font-size: clamp(30px, 7vw, 52px);
+        line-height: 1.05;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 22px;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      label {
+        display: block;
+        margin: 14px 0 6px;
+        font-weight: 800;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 13px 14px;
+        background: #fffdf8;
+        color: var(--text);
+        font: inherit;
+      }
+
+      textarea {
+        min-height: 104px;
+        resize: vertical;
+      }
+
+      a {
+        color: var(--primary);
+        font-weight: 800;
+      }
+
+      .lead,
+      .hint {
+        color: var(--muted);
+      }
+
+      .lead {
+        max-width: 720px;
+        font-size: 18px;
+      }
+
+      .hint {
+        font-size: 14px;
+      }
+
+      .warning {
+        border-color: var(--danger-border);
+        background: var(--danger-soft);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 52px;
+        margin-top: 16px;
+        border: 0;
+        border-radius: 16px;
+        background: var(--primary);
+        color: #fff;
+        font: inherit;
+        font-weight: 900;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .template {
+        white-space: pre-wrap;
+        border-radius: 14px;
+        background: #f3efe6;
+        padding: 14px;
+        color: var(--text);
+        font-size: 14px;
+      }
+
+      .footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 14px;
+        text-align: center;
+      }
+
+      @media (max-width: 760px) {
+        main {
+          padding-top: 18px;
+        }
+
+        .hero,
+        .card {
+          border-radius: 18px;
+          padding: 20px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="brand">
+          <span class="mark" aria-hidden="true">B</span>
+          <span>Bitmeden</span>
+        </div>
+        <h1 id="page-title">Bitmeden Hesap Silme Talebi</h1>
+        <p class="lead">
+          Bitmeden hesabınızı ve ilişkili verilerinizi silmek için bu sayfadan talep
+          başlatabilirsiniz. Bu sayfa uygulamaya giriş gerektirmez.
+        </p>
+      </section>
+
+      <section class="grid" aria-label="Hesap silme talebi bilgileri">
+        <article class="card">
+          <h2>Nasıl Talep Oluşturulur?</h2>
+          <p>
+            Bitmeden'de hesap oluşturduysanız hesap silme talebi gönderebilirsiniz. Lütfen
+            talebinizde yalnızca gerekli bilgileri paylaşın.
+          </p>
+          <ul>
+            <li>Hesap e-postanızı yazmanız gerekir.</li>
+            <li>Ad veya görünen ad bilgisini isteğe bağlı ekleyebilirsiniz.</li>
+            <li>Talep açıklaması isteğe bağlıdır.</li>
+            <li>Şifre, ödeme kartı bilgisi veya hassas belge göndermeyin.</li>
+          </ul>
+          <p>Uygulama içinden: <strong>Ayarlar &gt; Hesabımı sil</strong></p>
+        </article>
+
+        <article class="card warning">
+          <h2>Talep Sonrası Ne Olur?</h2>
+          <ul>
+            <li>Talebiniz destek sürecinde incelenir.</li>
+            <li>Hesabın size ait olduğunu doğrulamak için ek bilgi istenebilir.</li>
+            <li>Hesabınız ve ilişkili verileriniz silinir ya da anonimleştirilir.</li>
+            <li>Yasal, güvenlik veya platform gerekliliği olan kayıtlar sınırlı süre saklanabilir.</li>
+            <li>Yerel moddaki cihaz verileri uygulama verileri temizlenerek veya uygulama kaldırılarak silinebilir.</li>
+          </ul>
+          <p class="hint">Talebi hedef olarak 30 gün içinde işlemeye çalışırız.</p>
+        </article>
+      </section>
+
+      <section class="grid" aria-label="E-posta talebi oluştur">
+        <form class="card" id="deletion-form">
+          <h2>E-posta Taslağı Oluştur</h2>
+          <p class="hint">
+            Bu form verilerinizi sunucuya göndermez. Tarayıcınızda bir e-posta taslağı oluşturur.
+          </p>
+
+          <label for="account-email">Hesap e-postası</label>
+          <input id="account-email" name="accountEmail" type="email" autocomplete="email" required />
+
+          <label for="display-name">Ad / görünen ad <span class="hint">(isteğe bağlı)</span></label>
+          <input id="display-name" name="displayName" type="text" autocomplete="name" />
+
+          <label for="reason">Talep açıklaması <span class="hint">(isteğe bağlı)</span></label>
+          <textarea id="reason" name="reason" maxlength="1000"></textarea>
+
+          <button class="button" type="submit">Hesap silme talebi e-postası oluştur</button>
+        </form>
+
+        <article class="card">
+          <h2>E-posta Bilgileri</h2>
+          <p>Destek: <strong>support@bitmeden.app</strong></p>
+          <p>Gizlilik Politikası: <a href="../privacy-policy/">Bitmeden Gizlilik Politikası</a></p>
+          <p>Yürürlük tarihi: 22 Temmuz 2026</p>
+          <p>Uygulama sahibi: Bitmeden</p>
+          <div class="template" aria-label="E-posta şablonu">Konu: Bitmeden Hesap Silme Talebi
+
+Hesap e-postam:
+Adım:
+Talep açıklamam:
+
+Bitmeden hesabımın ve ilişkili verilerimin silinmesini talep ediyorum.</div>
+        </article>
+      </section>
+
+      <p class="footer">
+        Bu sayfa hesap silme talebi başlatmak içindir. Gizlilik soruları için support@bitmeden.app adresinden bize ulaşabilirsiniz.
+      </p>
+    </main>
+
+    <script>
+      const SUPPORT_EMAIL = "support@bitmeden.app";
+
+      document.getElementById("deletion-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        const accountEmail = form.accountEmail.value.trim();
+        const displayName = form.displayName.value.trim();
+        const reason = form.reason.value.trim();
+
+        if (!accountEmail) {
+          form.accountEmail.focus();
+          return;
+        }
+
+        const subject = "Bitmeden Hesap Silme Talebi";
+        const body = [
+          "Hesap e-postam: " + accountEmail,
+          "Adım: " + displayName,
+          "Talep açıklamam: " + reason,
+          "",
+          "Bitmeden hesabımın ve ilişkili verilerimin silinmesini talep ediyorum."
+        ].join("\n");
+
+        window.location.href =
+          "mailto:" +
+          encodeURIComponent(SUPPORT_EMAIL) +
+          "?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+    </script>
+  </body>
+</html>

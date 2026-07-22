@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bitmeden Gizlilik Politikası</title>
+    <meta
+      name="description"
+      content="Bitmeden mobil uygulamasının gizlilik politikası, veri işleme, saklama ve hesap silme bilgileri."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f3ea;
+        --card: #ffffff;
+        --text: #223126;
+        --muted: #667369;
+        --primary: #1f6b45;
+        --primary-soft: #e4f1e8;
+        --accent: #f2a61a;
+        --border: #e4ded2;
+        --shadow: 0 18px 45px rgba(35, 49, 38, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+      }
+
+      main {
+        width: min(960px, 100%);
+        margin: 0 auto;
+        padding: 32px 18px 56px;
+      }
+
+      .hero,
+      .section {
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: var(--card);
+        box-shadow: var(--shadow);
+      }
+
+      .hero {
+        padding: 32px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--primary);
+        font-weight: 900;
+      }
+
+      .mark {
+        display: inline-grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--primary-soft);
+      }
+
+      h1 {
+        margin: 18px 0 10px;
+        font-size: clamp(30px, 7vw, 52px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 22px;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul {
+        margin: 0 0 14px;
+        padding-left: 22px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      a {
+        color: var(--primary);
+        font-weight: 800;
+      }
+
+      .lead {
+        max-width: 740px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .pill {
+        display: inline-flex;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 8px 12px;
+        background: #fffaf1;
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .content {
+        display: grid;
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .section {
+        padding: 24px;
+      }
+
+      .notice {
+        border-color: rgba(242, 166, 26, 0.38);
+        background: #fff9ea;
+      }
+
+      .footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 14px;
+        text-align: center;
+      }
+
+      @media (max-width: 760px) {
+        main {
+          padding-top: 18px;
+        }
+
+        .hero,
+        .section {
+          border-radius: 18px;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="brand">
+          <span class="mark" aria-hidden="true">B</span>
+          <span>Bitmeden</span>
+        </div>
+        <h1 id="page-title">Bitmeden Gizlilik Politikası</h1>
+        <p class="lead">
+          Bu sayfa Bitmeden mobil uygulamasında hangi verilerin işlendiğini, bu verilerin nasıl
+          kullanıldığını, kimlerle paylaşılabileceğini ve kullanıcıların verilerini nasıl
+          silebileceğini açıklar.
+        </p>
+        <div class="meta" aria-label="Politika bilgileri">
+          <span class="pill">Son güncelleme: 22 Temmuz 2026</span>
+          <span class="pill">Paket adı: app.bitmeden.mobile</span>
+          <span class="pill">İletişim: support@bitmeden.app</span>
+        </div>
+      </section>
+
+      <div class="content">
+        <section class="section">
+          <h2>1. Bitmeden Ne Yapar?</h2>
+          <p>
+            Bitmeden, evdeki sık tüketilen ürünleri takip etmeye, alışveriş listesi oluşturmaya,
+            market alışverişini yönetmeye, hatırlatmalar kurmaya ve isteğe bağlı olarak fiyat
+            geçmişi tutmaya yardımcı olan bir mobil uygulamadır.
+          </p>
+          <p>
+            Uygulama temel olarak cihaz üzerinde yerel veriyle çalışır. Hesap oluşturma veya bulut
+            tabanlı özellikler kullanıldığında bazı veriler Bitmeden sunucularında işlenebilir.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>2. İşlediğimiz Veri Türleri</h2>
+          <ul>
+            <li>Hesap bilgileri: e-posta adresi, görünen ad, dahili kullanıcı kimliği ve oturum bilgileri.</li>
+            <li>Kimlik doğrulama bilgileri: giriş sırasında kullanılan parola sunucuya iletilir; parola düz metin olarak saklanmaz.</li>
+            <li>Ürün ve alışveriş listesi verileri: ürün adları, kategoriler, stok durumları, kritik ürün işaretleri, alışveriş listesi kalemleri, notlar, miktar/birim bilgileri ve liste şablonları.</li>
+            <li>Hatırlatma tercihleri: ürün hatırlatma ayarları, haftalık kontrol tercihi ve bildirim saatleri.</li>
+            <li>Fiyat ve alışveriş geçmişi: kullanıcının isteğe bağlı girdiği fiyat bilgileri ve market modu tamamlanma kayıtları.</li>
+            <li>Satın alma bilgileri: Pro satın alma veya geri yükleme akışları etkin olduğunda Google Play tarafından sağlanan satın alma durumu ve doğrulama bilgileri.</li>
+            <li>Teknik veriler: uygulama çalışması için gerekli istek kayıtları, hata kayıtları, cihaz/uygulama sürüm bilgileri ve IP adresi gibi sunucu loglarında oluşabilecek teknik bilgiler.</li>
+          </ul>
+          <p>
+            Bitmeden bu sürümde konum, rehber, SMS, arama geçmişi, kamera, mikrofon, sağlık verisi
+            veya cihaz dosyalarına erişim istemez. Uygulamada reklam SDK'sı veya üçüncü taraf analiz
+            SDK'sı kullanılmamaktadır.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>3. Verileri Kullanma Amaçlarımız</h2>
+          <ul>
+            <li>Ürün takibi ve alışveriş listesi özelliklerini sağlamak.</li>
+            <li>Hatırlatma ve bildirim tercihlerini çalıştırmak.</li>
+            <li>Hesap oluşturma, giriş yapma ve oturum güvenliğini sağlamak.</li>
+            <li>Pro satın alma veya geri yükleme işlemlerini Google Play üzerinden doğrulamak.</li>
+            <li>Kullanıcı destek taleplerine yanıt vermek.</li>
+            <li>Uygulamanın güvenliğini, performansını ve hata takibini sağlamak.</li>
+          </ul>
+        </section>
+
+        <section class="section notice">
+          <h2>4. Yerel Veri ve Bulut Veri</h2>
+          <p>
+            Hesap oluşturmadan kullanılan veriler cihazda saklanır. Cihazdaki yerel veriler,
+            kullanıcı uygulamayı silene veya cihaz verilerini temizleyene kadar kalabilir.
+          </p>
+          <p>
+            Hesap veya bulut tabanlı özellikler kullanıldığında ilgili hesap ve uygulama verileri
+            Bitmeden backend servisleriyle eşitlenebilir. Ev paylaşımı özelliği bu sürümde kapalıdır.
+            Bu özellik ileride tekrar açılırsa, politika ve uygulama içi açıklamalar bu kullanımı
+            yansıtacak şekilde güncellenecektir.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>5. Bildirimler</h2>
+          <p>
+            Bitmeden, ürün ve alışveriş hatırlatmaları için bildirim izni isteyebilir. Bildirim izni
+            isteğe bağlıdır. Kullanıcı bildirimleri Android ayarlarından veya uygulama içindeki
+            bildirim ayarlarından kapatabilir.
+          </p>
+          <p>
+            Bu sürümde uzak push bildirim token'ı sunucuda saklama amacıyla kullanılmaz; hatırlatmalar
+            ağırlıklı olarak cihaz üzerinde planlanır.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>6. Verilerin Paylaşılması</h2>
+          <p>Bitmeden kullanıcı verilerini satmaz.</p>
+          <ul>
+            <li>Uygulamanın çalışması için backend, hosting, veri tabanı ve teknik altyapı sağlayıcıları tarafından.</li>
+            <li>Pro satın alma veya geri yükleme işlemi başlatıldığında Google Play Billing tarafından.</li>
+            <li>Kullanıcı destek talebi gönderdiğinde destek ve e-posta hizmetleri tarafından.</li>
+            <li>Yasal yükümlülük, güvenlik, dolandırıcılık önleme veya hakların korunması gerektiğinde yetkili kişi ve kurumlarla.</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>7. Güvenlik</h2>
+          <p>
+            Bitmeden, kişisel verileri korumak için makul teknik ve idari önlemler uygular. Üretim
+            ortamında veri aktarımı HTTPS üzerinden yapılmalıdır. Parolalar düz metin olarak saklanmaz.
+            Oturum bilgilerinin korunması için uygulama ve sunucu tarafında erişim kontrolleri kullanılır.
+          </p>
+          <p>Hiçbir yöntem yüzde yüz güvenli değildir; bu nedenle kullanıcıların hesap bilgilerini ve cihazlarını koruması önemlidir.</p>
+        </section>
+
+        <section class="section">
+          <h2>8. Veri Saklama</h2>
+          <p>
+            Hesap verileri, hesap aktif olduğu sürece veya hizmeti sağlamak için gerekli olduğu müddetçe
+            saklanabilir. Destek, güvenlik, yasal yükümlülük, muhasebe veya uyuşmazlık çözümü için
+            gerekli kayıtlar sınırlı süreyle saklanabilir.
+          </p>
+          <p>Cihaz üzerinde tutulan yerel veriler kullanıcı tarafından uygulama verileri temizlenerek veya uygulama kaldırılarak silinebilir.</p>
+        </section>
+
+        <section class="section">
+          <h2>9. Hesap ve Veri Silme</h2>
+          <p>Bitmeden hesabı oluşturan kullanıcılar hesap silme talebi gönderebilir.</p>
+          <p>Uygulama içinden: <strong>Ayarlar &gt; Hesabımı sil</strong></p>
+          <p>Web üzerinden: <a href="../account-deletion/">Hesap silme talebi</a></p>
+          <p>
+            Silme talebi alındıktan sonra hesabın kullanıcıya ait olduğunu doğrulamak için ek bilgi
+            istenebilir. Doğrulama tamamlandıktan sonra hesap ve ilişkili kişisel veriler, saklanması
+            yasal veya güvenlik açısından zorunlu kayıtlar hariç olmak üzere silinir ya da anonimleştirilir.
+            Silme taleplerini makul süre içinde, hedef olarak 30 gün içinde, işlemeye çalışırız.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>10. Çocukların Gizliliği</h2>
+          <p>Bitmeden çocuklara yönelik tasarlanmamıştır ve çocuklardan bilerek kişisel veri toplamayı hedeflemez.</p>
+        </section>
+
+        <section class="section">
+          <h2>11. Uluslararası Aktarım</h2>
+          <p>
+            Backend, hosting ve teknik servis sağlayıcıları farklı ülkelerde bulunabilir. Uygulamayı
+            kullanarak verilerin bu altyapılar üzerinden işlenebileceğini kabul etmiş olursun.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>12. Değişiklikler</h2>
+          <p>
+            Bu politika zaman zaman güncellenebilir. Önemli değişikliklerde uygulama içinden veya
+            uygun başka kanallardan bilgilendirme yapılabilir.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>13. İletişim</h2>
+          <p>Gizlilik, hesap silme veya veri talepleri için: <a href="mailto:support@bitmeden.app">support@bitmeden.app</a></p>
+        </section>
+      </div>
+
+      <p class="footer">© 2026 Bitmeden. Bu sayfa herkesin erişebileceği gizlilik politikası sayfasıdır.</p>
+    </main>
+  </body>
+</html>
