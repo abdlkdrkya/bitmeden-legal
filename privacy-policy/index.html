@@ -203,12 +203,13 @@
             <li>Hatırlatma tercihleri: ürün hatırlatma ayarları, haftalık kontrol tercihi ve bildirim saatleri.</li>
             <li>Fiyat ve alışveriş geçmişi: kullanıcının isteğe bağlı girdiği fiyat bilgileri ve market modu tamamlanma kayıtları.</li>
             <li>Satın alma bilgileri: Pro satın alma veya geri yükleme akışları etkin olduğunda Google Play tarafından sağlanan satın alma durumu ve doğrulama bilgileri.</li>
+            <li>Reklam ve reklam performans verileri: Google Mobile Ads SDK (AdMob) kullanıldığında IP adresi, Android reklam kimliği, app set ID, uygulama açılışı, reklam görüntüleme/dokunma etkileşimleri, SDK performans ve teşhis bilgileri gibi veriler Google tarafından işlenebilir.</li>
             <li>Teknik veriler: uygulama çalışması için gerekli istek kayıtları, hata kayıtları, cihaz/uygulama sürüm bilgileri ve IP adresi gibi sunucu loglarında oluşabilecek teknik bilgiler.</li>
           </ul>
           <p>
             Bitmeden bu sürümde konum, rehber, SMS, arama geçmişi, kamera, mikrofon, sağlık verisi
-            veya cihaz dosyalarına erişim istemez. Uygulamada reklam SDK'sı veya üçüncü taraf analiz
-            SDK'sı kullanılmamaktadır.
+            veya cihaz dosyalarına erişim istemez. Uygulamada banner reklam göstermek için Google
+            Mobile Ads SDK (AdMob) kullanılır; ayrı bir üçüncü taraf analiz SDK'sı kullanılmamaktadır.
           </p>
         </section>
 
@@ -219,6 +220,7 @@
             <li>Hatırlatma ve bildirim tercihlerini çalıştırmak.</li>
             <li>Hesap oluşturma, giriş yapma ve oturum güvenliğini sağlamak.</li>
             <li>Pro satın alma veya geri yükleme işlemlerini Google Play üzerinden doğrulamak.</li>
+            <li>Banner reklam göstermek, reklam performansını ölçmek, kötüye kullanım ve dolandırıcılığı önlemek.</li>
             <li>Kullanıcı destek taleplerine yanıt vermek.</li>
             <li>Uygulamanın güvenliğini, performansını ve hata takibini sağlamak.</li>
           </ul>
@@ -257,6 +259,7 @@
           <ul>
             <li>Uygulamanın çalışması için backend, hosting, veri tabanı ve teknik altyapı sağlayıcıları tarafından.</li>
             <li>Pro satın alma veya geri yükleme işlemi başlatıldığında Google Play Billing tarafından.</li>
+            <li>Banner reklamlar gösterildiğinde Google Mobile Ads SDK / AdMob tarafından.</li>
             <li>Kullanıcı destek talebi gönderdiğinde destek ve e-posta hizmetleri tarafından.</li>
             <li>Yasal yükümlülük, güvenlik, dolandırıcılık önleme veya hakların korunması gerektiğinde yetkili kişi ve kurumlarla.</li>
           </ul>
