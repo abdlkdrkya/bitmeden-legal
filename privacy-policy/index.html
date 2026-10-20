@@ -174,7 +174,7 @@
           silebileceğini açıklar.
         </p>
         <div class="meta" aria-label="Politika bilgileri">
-          <span class="pill">Son güncelleme: 22 Temmuz 2026</span>
+          <span class="pill">Son güncelleme: 20 Ekim 2026</span>
           <span class="pill">Paket adı: app.bitmeden.mobile</span>
           <span class="pill">İletişim: support@bitmeden.app</span>
         </div>
@@ -202,14 +202,15 @@
             <li>Ürün ve alışveriş listesi verileri: ürün adları, kategoriler, stok durumları, kritik ürün işaretleri, alışveriş listesi kalemleri, notlar, miktar/birim bilgileri ve liste şablonları.</li>
             <li>Hatırlatma tercihleri: ürün hatırlatma ayarları, haftalık kontrol tercihi ve bildirim saatleri.</li>
             <li>Fiyat ve alışveriş geçmişi: kullanıcının isteğe bağlı girdiği fiyat bilgileri ve market modu tamamlanma kayıtları.</li>
-            <li>Satın alma bilgileri: Pro satın alma veya geri yükleme akışları etkin olduğunda Google Play tarafından sağlanan satın alma durumu ve doğrulama bilgileri.</li>
-            <li>Reklam ve reklam performans verileri: Google Mobile Ads SDK (AdMob) kullanıldığında IP adresi, Android reklam kimliği, app set ID, uygulama açılışı, reklam görüntüleme/dokunma etkileşimleri, SDK performans ve teşhis bilgileri gibi veriler Google tarafından işlenebilir.</li>
-            <li>Teknik veriler: uygulama çalışması için gerekli istek kayıtları, hata kayıtları, cihaz/uygulama sürüm bilgileri ve IP adresi gibi sunucu loglarında oluşabilecek teknik bilgiler.</li>
+            <li>Satın alma bilgileri: Google Play üzerinden Pro satın alma veya geri yükleme başlatıldığında doğrulama için satın alma belirteci, ürün kimliği, satın alma/abonelik durumu ve sona erme bilgisi sunucuda işlenebilir.</li>
+            <li>Teknik veriler: API istekleri sırasında sunucu güvenlik kayıtlarında oluşabilecek IP adresi, zaman damgası ve istek yolu gibi bağlantı bilgileri.</li>
+            <li>Hata teşhis verileri: üretim hata izleme DSN'si yapılandırıldığında uygulama sürümü, cihaz/işletim sistemi bilgisi ve hata yığın izi. Bu veriler filtrelenir; kullanıcı metni, e-posta, istek başlıkları ve uygulama durumu gönderilmez. DSN yoksa hata izleme kapalıdır.</li>
           </ul>
           <p>
-            Bitmeden bu sürümde konum, rehber, SMS, arama geçmişi, kamera, mikrofon, sağlık verisi
-            veya cihaz dosyalarına erişim istemez. Uygulamada banner reklam göstermek için Google
-            Mobile Ads SDK (AdMob) kullanılır; ayrı bir üçüncü taraf analiz SDK'sı kullanılmamaktadır.
+            Bitmeden konum, rehber, SMS, arama geçmişi, kamera, mikrofon, sağlık verisi veya cihaz
+            dosyalarına erişim istemez. Bu sürümde Google Mobile Ads/AdMob reklam entegrasyonu
+            bulunmaz. Uygulama içi kullanım olayları üretimde üçüncü taraf analiz hizmetlerine
+            gönderilmez; hata izleme yalnızca yukarıda belirtilen koşullarda çalışır.
           </p>
         </section>
 
@@ -219,8 +220,8 @@
             <li>Ürün takibi ve alışveriş listesi özelliklerini sağlamak.</li>
             <li>Hatırlatma ve bildirim tercihlerini çalıştırmak.</li>
             <li>Hesap oluşturma, giriş yapma ve oturum güvenliğini sağlamak.</li>
-            <li>Pro satın alma veya geri yükleme işlemlerini Google Play üzerinden doğrulamak.</li>
-            <li>Banner reklam göstermek, reklam performansını ölçmek, kötüye kullanım ve dolandırıcılığı önlemek.</li>
+            <li>Pro satın alma veya geri yükleme işlemlerini Google Play üzerinden doğrulamak ve abonelik hakkını yönetmek.</li>
+            <li>Hesap, oturum ve sunucu güvenliğini sağlamak; yapılandırılmışsa hata teşhisi yapmak.</li>
             <li>Kullanıcı destek taleplerine yanıt vermek.</li>
             <li>Uygulamanın güvenliğini, performansını ve hata takibini sağlamak.</li>
           </ul>
@@ -234,9 +235,10 @@
           </p>
           <p>
             Hesap veya bulut tabanlı özellikler kullanıldığında ilgili hesap ve uygulama verileri
-            Bitmeden backend servisleriyle eşitlenebilir. Ev paylaşımı özelliği bu sürümde kapalıdır.
-            Bu özellik ileride tekrar açılırsa, politika ve uygulama içi açıklamalar bu kullanımı
-            yansıtacak şekilde güncellenecektir.
+            Bitmeden backend servisleriyle eşitlenebilir. Ev paylaşımını kullanıcı etkinleştirirse,
+            seçtiği ev üyeleri o evdeki ürün, stok, alışveriş listesi ve ilgili etkinlik bilgilerini
+            uygulama işlevinin parçası olarak görebilir. Kullanıcının eklediği notlar, miktarlar ve
+            fiyat kayıtları da ilgili ev üyeleriyle paylaşılabilir.
           </p>
         </section>
 
@@ -258,8 +260,9 @@
           <p>Bitmeden kullanıcı verilerini satmaz.</p>
           <ul>
             <li>Uygulamanın çalışması için backend, hosting, veri tabanı ve teknik altyapı sağlayıcıları tarafından.</li>
-            <li>Pro satın alma veya geri yükleme işlemi başlatıldığında Google Play Billing tarafından.</li>
-            <li>Banner reklamlar gösterildiğinde Google Mobile Ads SDK / AdMob tarafından.</li>
+            <li>Kullanıcı satın alma veya geri yükleme başlattığında satın alma doğrulaması için Google Play ile.</li>
+            <li>Ev paylaşımı etkinleştirildiğinde, ilgili ev içeriği kullanıcının seçtiği ev üyeleriyle.</li>
+            <li>Üretim hata izleme DSN'si yapılandırılırsa, yukarıda belirtilen filtrelenmiş hata teşhis verileri Sentry hizmetiyle.</li>
             <li>Kullanıcı destek talebi gönderdiğinde destek ve e-posta hizmetleri tarafından.</li>
             <li>Yasal yükümlülük, güvenlik, dolandırıcılık önleme veya hakların korunması gerektiğinde yetkili kişi ve kurumlarla.</li>
           </ul>
@@ -268,8 +271,8 @@
         <section class="section">
           <h2>7. Güvenlik</h2>
           <p>
-            Bitmeden, kişisel verileri korumak için makul teknik ve idari önlemler uygular. Üretim
-            ortamında veri aktarımı HTTPS üzerinden yapılmalıdır. Parolalar düz metin olarak saklanmaz.
+            Bitmeden, kişisel verileri korumak için makul teknik ve idari önlemler uygular. Uygulama
+            sunucuya HTTPS üzerinden bağlanır. Parolalar düz metin olarak saklanmaz.
             Oturum bilgilerinin korunması için uygulama ve sunucu tarafında erişim kontrolleri kullanılır.
           </p>
           <p>Hiçbir yöntem yüzde yüz güvenli değildir; bu nedenle kullanıcıların hesap bilgilerini ve cihazlarını koruması önemlidir.</p>
@@ -283,6 +286,11 @@
             gerekli kayıtlar sınırlı süreyle saklanabilir.
           </p>
           <p>Cihaz üzerinde tutulan yerel veriler kullanıcı tarafından uygulama verileri temizlenerek veya uygulama kaldırılarak silinebilir.</p>
+          <p>
+            Bitmeden tarafından oluşturulan veritabanı dışa aktarma yedekleri 29 günden eski olduğunda
+            otomatik temizlenir. Hosting sağlayıcısının yönettiği altyapı anlık görüntüleri veya başka
+            yedek kopyalar farklı saklama sürelerine tabi olabilir.
+          </p>
         </section>
 
         <section class="section">
@@ -291,10 +299,11 @@
           <p>Uygulama içinden: <strong>Ayarlar &gt; Hesabımı sil</strong></p>
           <p>Web üzerinden: <a href="../account-deletion/">Hesap silme talebi</a></p>
           <p>
-            Silme talebi alındıktan sonra hesabın kullanıcıya ait olduğunu doğrulamak için ek bilgi
-            istenebilir. Doğrulama tamamlandıktan sonra hesap ve ilişkili kişisel veriler, saklanması
-            yasal veya güvenlik açısından zorunlu kayıtlar hariç olmak üzere silinir ya da anonimleştirilir.
-            Silme taleplerini makul süre içinde, hedef olarak 30 gün içinde, işlemeye çalışırız.
+            Silme talebinin gönderilmesi hesabı hemen silmez. Talep doğrulandıktan sonra hesap ve
+            ilişkili kişisel veriler silinir veya anonimleştirilir; yasal, güvenlik ya da muhasebe
+            yükümlülükleri kapsamında tutulması gereken sınırlı kayıtlar saklanabilir. Birden fazla
+            üyesi olan evlerde ortak ürün ve liste kayıtları korunabilir; silinen üyenin kimliği bu
+            kayıtlardan kaldırılır. Talepleri hedef olarak 30 gün içinde sonuçlandırmaya çalışırız.
           </p>
         </section>
 
