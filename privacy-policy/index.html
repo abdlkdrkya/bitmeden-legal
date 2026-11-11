@@ -174,7 +174,7 @@
           silebileceğini açıklar.
         </p>
         <div class="meta" aria-label="Politika bilgileri">
-          <span class="pill">Son güncelleme: 20 Ekim 2026</span>
+          <span class="pill">Son güncelleme: 4 Kasım 2026</span>
           <span class="pill">Paket adı: app.bitmeden.mobile</span>
           <span class="pill">İletişim: support@bitmeden.app</span>
         </div>
@@ -202,15 +202,16 @@
             <li>Ürün ve alışveriş listesi verileri: ürün adları, kategoriler, stok durumları, kritik ürün işaretleri, alışveriş listesi kalemleri, notlar, miktar/birim bilgileri ve liste şablonları.</li>
             <li>Hatırlatma tercihleri: ürün hatırlatma ayarları, haftalık kontrol tercihi ve bildirim saatleri.</li>
             <li>Fiyat ve alışveriş geçmişi: kullanıcının isteğe bağlı girdiği fiyat bilgileri ve market modu tamamlanma kayıtları.</li>
-            <li>Satın alma bilgileri: Google Play üzerinden Pro satın alma veya geri yükleme başlatıldığında doğrulama için satın alma belirteci, ürün kimliği, satın alma/abonelik durumu ve sona erme bilgisi sunucuda işlenebilir.</li>
-            <li>Teknik veriler: API istekleri sırasında sunucu güvenlik kayıtlarında oluşabilecek IP adresi, zaman damgası ve istek yolu gibi bağlantı bilgileri.</li>
-            <li>Hata teşhis verileri: üretim hata izleme DSN'si yapılandırıldığında uygulama sürümü, cihaz/işletim sistemi bilgisi ve hata yığın izi. Bu veriler filtrelenir; kullanıcı metni, e-posta, istek başlıkları ve uygulama durumu gönderilmez. DSN yoksa hata izleme kapalıdır.</li>
+            <li>Satın alma bilgileri: Google Play üzerinden başlatılan Pro satın alma veya geri yüklemenin doğrulanması için satın alma belirteci, ürün kimliği, durum ve sona erme bilgisi sunucuda işlenebilir.</li>
+            <li>Teknik veriler: uygulamanın API istekleri için gerekli bağlantı bilgileri ve sunucu güvenlik kayıtlarında işlenebilecek IP adresi, zaman damgası ve istek yolu.</li>
+            <li>Hata raporları: uygulama beklenmedik bir hatayla karşılaştığında hata türü, uygulama içi kod konumları (fonksiyon adı ve satır/sütun), hatanın oluştuğu ekranın genel adı, uygulama ve işletim sistemi sürümü. Raporlar anonimdir: hesap, ev veya cihaz kimliği, IP adresi, hata mesajı, ürün adı, not ve e-posta gönderilmez veya saklanmaz. Raporlar yalnızca Bitmeden sunucularına gönderilir, 90 gün sonra otomatik silinir ve Ayarlar &gt; Kullanım ve hata istatistikleri kapatılarak durdurulabilir.</li>
+            <li>Kullanım istatistikleri: Ayarlar &gt; Kullanım ve hata istatistikleri açıkken uygulama içi etkileşimler (ör. görüntülenen ekran, ürün veya liste ekleme, ev oluşturma ve davet etme, Premium sayfasını görme, satın alma sonucu), bu kurulum için rastgele oluşturulan bir kimlik, hesapla giriş yapıldıysa dahili kullanıcı kimliği, oturum kimliği, uygulama ve işletim sistemi sürümü, dil, plan türü ve ev modu. Ürün adları, notlar, fiyat metinleri, e-posta adresi, davet kodları ve diğer serbest metinler gönderilmez. Bu ölçüm Ayarlar'dan istenildiği zaman kapatılabilir; kapatıldığında cihazda bekleyen istatistikler de silinir.</li>
           </ul>
           <p>
             Bitmeden konum, rehber, SMS, arama geçmişi, kamera, mikrofon, sağlık verisi veya cihaz
-            dosyalarına erişim istemez. Bu sürümde Google Mobile Ads/AdMob reklam entegrasyonu
-            bulunmaz. Uygulama içi kullanım olayları üretimde üçüncü taraf analiz hizmetlerine
-            gönderilmez; hata izleme yalnızca yukarıda belirtilen koşullarda çalışır.
+            dosyalarına erişim istemez. Uygulamada reklam SDK'sı ve reklam kimliği kullanılmaz. Kullanım
+            istatistikleri, ayrı bir SDK olmadan doğrudan ürün analitiği sağlayıcımız PostHog'un AB
+            veri merkezine gönderilir.
           </p>
         </section>
 
@@ -221,7 +222,8 @@
             <li>Hatırlatma ve bildirim tercihlerini çalıştırmak.</li>
             <li>Hesap oluşturma, giriş yapma ve oturum güvenliğini sağlamak.</li>
             <li>Pro satın alma veya geri yükleme işlemlerini Google Play üzerinden doğrulamak ve abonelik hakkını yönetmek.</li>
-            <li>Hesap, oturum ve sunucu güvenliğini sağlamak; yapılandırılmışsa hata teşhisi yapmak.</li>
+            <li>Hesap, oturum ve sunucu güvenliğini sağlamak; uygulama hatalarını tespit edip düzeltmek.</li>
+            <li>Hangi özelliklerin kullanıldığını ve kurulumdan hesap açma, davet ve Premium'a kadar olan adımları toplu olarak ölçerek uygulamayı geliştirmek (Ayarlar'dan kapatılabilir).</li>
             <li>Kullanıcı destek taleplerine yanıt vermek.</li>
             <li>Uygulamanın güvenliğini, performansını ve hata takibini sağlamak.</li>
           </ul>
@@ -237,8 +239,8 @@
             Hesap veya bulut tabanlı özellikler kullanıldığında ilgili hesap ve uygulama verileri
             Bitmeden backend servisleriyle eşitlenebilir. Ev paylaşımını kullanıcı etkinleştirirse,
             seçtiği ev üyeleri o evdeki ürün, stok, alışveriş listesi ve ilgili etkinlik bilgilerini
-            uygulama işlevinin parçası olarak görebilir. Kullanıcının eklediği notlar, miktarlar ve
-            fiyat kayıtları da ilgili ev üyeleriyle paylaşılabilir.
+            uygulama işlevinin parçası olarak görebilir. Kullanıcı tarafından eklenen notlar ve fiyat
+            kayıtları da ilgili ev üyeleriyle paylaşılabilir.
           </p>
         </section>
 
@@ -260,9 +262,10 @@
           <p>Bitmeden kullanıcı verilerini satmaz.</p>
           <ul>
             <li>Uygulamanın çalışması için backend, hosting, veri tabanı ve teknik altyapı sağlayıcıları tarafından.</li>
+            <li>Pro satın alma veya geri yükleme işlemi başlatıldığında Google Play Billing tarafından.</li>
             <li>Kullanıcı satın alma veya geri yükleme başlattığında satın alma doğrulaması için Google Play ile.</li>
             <li>Ev paylaşımı etkinleştirildiğinde, ilgili ev içeriği kullanıcının seçtiği ev üyeleriyle.</li>
-            <li>Üretim hata izleme DSN'si yapılandırılırsa, yukarıda belirtilen filtrelenmiş hata teşhis verileri Sentry hizmetiyle.</li>
+            <li>Kullanım istatistikleri açıksa, yukarıda belirtilen istatistik verileri ürün analitiği hizmet sağlayıcımız PostHog ile (AB veri merkezi).</li>
             <li>Kullanıcı destek talebi gönderdiğinde destek ve e-posta hizmetleri tarafından.</li>
             <li>Yasal yükümlülük, güvenlik, dolandırıcılık önleme veya hakların korunması gerektiğinde yetkili kişi ve kurumlarla.</li>
           </ul>
@@ -286,24 +289,20 @@
             gerekli kayıtlar sınırlı süreyle saklanabilir.
           </p>
           <p>Cihaz üzerinde tutulan yerel veriler kullanıcı tarafından uygulama verileri temizlenerek veya uygulama kaldırılarak silinebilir.</p>
-          <p>
-            Bitmeden tarafından oluşturulan veritabanı dışa aktarma yedekleri 29 günden eski olduğunda
-            otomatik temizlenir. Hosting sağlayıcısının yönettiği altyapı anlık görüntüleri veya başka
-            yedek kopyalar farklı saklama sürelerine tabi olabilir.
-          </p>
         </section>
 
         <section class="section">
           <h2>9. Hesap ve Veri Silme</h2>
           <p>Bitmeden hesabı oluşturan kullanıcılar hesap silme talebi gönderebilir.</p>
           <p>Uygulama içinden: <strong>Ayarlar &gt; Hesabımı sil</strong></p>
-          <p>Web üzerinden: <a href="../account-deletion/">Hesap silme talebi</a></p>
+          <p>Web üzerinden: <a href="https://api.bitmeden.site/account-deletion.html">Hesap silme talebi</a></p>
           <p>
-            Silme talebinin gönderilmesi hesabı hemen silmez. Talep doğrulandıktan sonra hesap ve
-            ilişkili kişisel veriler silinir veya anonimleştirilir; yasal, güvenlik ya da muhasebe
-            yükümlülükleri kapsamında tutulması gereken sınırlı kayıtlar saklanabilir. Birden fazla
-            üyesi olan evlerde ortak ürün ve liste kayıtları korunabilir; silinen üyenin kimliği bu
-            kayıtlardan kaldırılır. Talepleri hedef olarak 30 gün içinde sonuçlandırmaya çalışırız.
+            Uygulama içi form bir silme talebi oluşturur; tek başına hesabı hemen silmez. Talep kimlik
+            doğrulamasından ve destek/operasyon incelemesinden sonra sonuçlandırılır. Birden fazla üyesi
+            olan evlerde ortak ürün ve liste kayıtları ev verisi olarak tutulabilir ve silinen üyenin
+            kimliği bu kayıtlardan kaldırılır. Silme talebinin sonucu ve saklanabilecek kayıtlar hakkında
+            kullanıcı bilgilendirilir. Yedeklerin 30 gün içinde silindiği ancak üretimdeki tüm yedek
+            türleri ve otomatik temizleme işi doğrulandıktan sonra kesin taahhüt olarak belirtilmelidir.
           </p>
         </section>
 
